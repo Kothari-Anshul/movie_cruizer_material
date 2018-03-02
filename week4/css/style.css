@@ -1,0 +1,13 @@
+.center {
+	text-align:center;
+}
+.circ{
+	border-radius: 50%;
+}
+.margin_suff {
+	margin:20px;
+}
+
+.side-nav li > a > i.material-icons {
+	float:right;
+}
