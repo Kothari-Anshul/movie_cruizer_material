@@ -1,0 +1,29 @@
+{
+  "name": "movie_cruizer_material",
+  "version": "1.0.0",
+  "description": "Using Material UI Specs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kothari-Anshul/movie_cruizer_material.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kothari-Anshul/movie_cruizer_material/issues"
+  },
+  "homepage": "https://github.com/Kothari-Anshul/movie_cruizer_material#readme",
+  "dependencies": {
+    "eslint": "^4.18.2",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "webpack": "^4.0.1"
+  }
+}
