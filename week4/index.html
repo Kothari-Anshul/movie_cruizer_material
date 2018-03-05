@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Movie Store
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="main">
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper light-blue darken-3">
+                <a href="#!" class="brand-logo">MOVIE CRUIZER</a>
+                <a href="#!" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#create_modal" class=" waves-effect waves-light btn  blue-grey lighten-5  light-blue-text text-darken-3 modal-trigger">CREATE COLLECTION</a></li>
+                    <li><a href="#" class="gg waves-effect waves-light btn  blue-grey lighten-5  light-blue-text text-darken-3" data-activates="slide-out" id="my_collection">MY COLLECTIONS</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="#create_modal" class=" waves-effect waves-light btn  blue-grey lighten-5  light-blue-text text-darken-3 modal-trigger">CREATE COLLECTION</a></li>
+                    <li><a href="#" data-activates="slide-out" class=" gg waves-effect waves-light btn  blue-grey lighten-5 light-blue-text text-darken-3 " id="my_collection">MY COLLECTIONS</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <ul id="slide-out" class="side-nav">
+    </ul>
+    <div id="movie_modal" class="modal modal-fixed-footer" style="width:90%;">
+        <div class="right-align">
+            <a class="modal-close "><i class="material-icons grey-text text-darken-1">clear</i></a>
+        </div>
+        <div class="modal-content" id="movie_modal_content">
+        </div>
+        <div class="modal-footer">
+            <a id="delete_movie" href="#" class=" waves-effect waves-green btn-flat ">Delete</a>
+        </div>
+    </div>
+    <div id="create_modal" class="modal">
+        <div class="right-align margin_suff">
+            <a class="modal-close"><i class="material-icons grey-text text-darken-1">clear</i></a>
+        </div>
+        <div class="modal-content">
+            <h4>Give Name to Your Collection</h4>
+            <div class="row">
+                
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input placeholder="Collection Name" id="first_name" type="text">
+                        </div>
+                    </div>
+               
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a id="save" class="waves-effect waves-green btn-flat">SAVE</a>
+        </div>
+    </div>
+    <div id="rename_modal" class="modal">
+        <div class="right-align margin_suff">
+            <a class="modal-close"><i class="material-icons grey-text text-darken-1">clear</i></a>
+        </div>
+        <div class="modal-content">
+            <h4>Give Different Name to Your Collection</h4>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input placeholder="Collection Name" id="new_name" type="text">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a id="rename" class="waves-effect waves-green btn-flat">Rename</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <form class="col s12" id = "search_form">
+                <div class="row center">
+                    <div class="input-field col s12 l10">
+                        <input id="movie_name" type="text">
+                        <label for="movie_name">Enter Your Movie Name</label>
+                    </div>
+                    <div class="input-field col s12  l2">
+                        <a class="waves-effect waves-light btn" id="search_btn">Search</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row" id="search_box">
+        </div>
+        <div id="more_modal" class="modal bottom-sheet">
+            <div class="right-align">
+                <a class="modal-close"><i class="material-icons">clear</i></a>
+            </div>
+            <div class="modal-content" id="more_modal_content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+            </div>
+        </div>
+        <!-- Modal Structure -->
+        <div id="dropdown_modal" class="modal">
+            <div class="right-align">
+                <a class="modal-close"><i class="material-icons">clear</i></a>
+            </div>
+            <div class="modal-content" id="dropdown_modal_content">
+            </div>
+            <div class="modal-footer center-align">
+                <a href="#!" id="add_to_collection_btn" class="modal-action modal-close waves-effect waves-green btn-flat">ADD TO COLLECTION</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/getCard.js"></script>
+    <script src="js/getdata.js"></script>
+    <script src="js/script.js"></script>
+</body>
