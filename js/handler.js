@@ -8,10 +8,22 @@ import B from "./collectionView.js";
 
 var P = new A();
 var Q = new B();
-
-var movie_to_poster = {};
+var previous_movie_to_poster = localStorage.getItem("Key2");
+if(previous_movie_to_poster == null){
+    var movie_to_poster = {};
+}
+else{
+    movie_to_poster = JSON.parse(previous_movie_to_poster);
+}
 var buffer = "";
-var collection = {};
+var previous_state = localStorage.getItem("Key");
+if(previous_state == null){
+    var collection = {};
+}
+else {
+    var collection = JSON.parse(previous_state);
+}
+
 var json_array = [];
 
 
@@ -43,7 +55,7 @@ export function searchCB() {
 			}
 
 
-
+            localStorage.setItem("Key2",JSON.stringify(movie_to_poster));
 
 			if (search_result === "") {
 				search_box.innerHTML = "DATA NOT FOUND";
@@ -127,6 +139,8 @@ export function addToCollectionBtnCB() {
 				if (array.indexOf(buffer) === -1) {
 					array.push(buffer);
 					//console.log(collection);
+                    // update the local stroge
+                    localStorage.setItem("Key",JSON.stringify(collection));
 					Materialize.toast(` ${buffer} Added to Selected Collections`, 3000);
 				}
 			}
@@ -141,6 +155,7 @@ export function saveCB() {
 		return;
 	}
 	collection[name] = [];
+    localStorage.setItem("Key",JSON.stringify(collection));
 	//console.log(collection);
 	$("#create_modal").modal("close");
 	Materialize.toast(`Created ${name}`, 3000);
@@ -181,6 +196,7 @@ export function myCollectionCB() {
 		del.addEventListener("click", function(event) {
 			let k = this.id.substring(3);
 			delete collection[k];
+            localStorage.setItem("Key",JSON.stringify(collection));
 			Materialize.toast(`${k} Deleted`, 3000);
 			event.stopPropagation();
 			$(".gg").sideNav("hide");
@@ -205,6 +221,7 @@ export function renameCB() {
 	let new_name = document.getElementById("new_name").value;
 	collection[new_name] = collection[rename_buffer];
 	delete collection[rename_buffer];
+    localStorage.setItem("Key",JSON.stringify(collection));
 	$("#rename_modal").modal("close");
 	Materialize.toast("Successfully Renamed", 3000);
 	$(".gg").sideNav("hide");
@@ -232,6 +249,7 @@ export function deleteCB() {
 			}
 		}
 	}
+    localStorage.setItem("Key",JSON.stringify(collection));
 	Materialize.toast(`Successfully Deleted ${count} Movies`, 3000);
 
 	$("#movie_modal").modal("close");
