@@ -1,3 +1,5 @@
+import {mainCB, searchCB, formCB, addToCollectionBtnCB, saveCB, myCollectionCB, renameCB, deleteCB} from './handler.js';
+
 window.onload = function() {
 	console.log("I am in load ");
     const searchForm = document.getElementById("search_form");

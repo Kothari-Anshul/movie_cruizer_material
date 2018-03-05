@@ -1,3 +1,14 @@
+import 'materialize-css';
+import $ from 'jquery';
+import jQuery from 'jquery';
+import getData from './getdata.js';
+import './jquery.js';
+import A from './searchView.js';
+import B from './collectionView.js'
+
+var P = new A();
+var Q = new B();
+
 var movie_to_poster = {};
 var buffer = "";
 var collection = {};
@@ -5,7 +16,7 @@ var json_array = [];
 
 
 
-function searchCB() {
+export function searchCB() {
 	let movie_name = document.getElementById("movie_name");
 	let search_box = document.getElementById("search_box");
     let temp = movie_name.value.trim();
@@ -21,11 +32,11 @@ function searchCB() {
         function(data) {
             json_array = data;
             var search_result = "";
-            for (key in data) {
+            for (let key in data) {
 
                 movie_to_poster[data[key]["original_title"]] = data[key]["poster_path"];
 
-                let x = getCard(key, data[key]);
+                let x = P.getCard(key, data[key]);
 
 
                 search_result += x;
@@ -54,7 +65,7 @@ function searchCB() {
                 more.addEventListener("click", function() {
                     let k = parseInt(this.id.substring(4));
 
-                    more_modal_content.innerHTML = getMoreView(k, json_array);
+                    more_modal_content.innerHTML = P.getMoreView(k, json_array);
 
 
                 });
@@ -64,10 +75,10 @@ function searchCB() {
                 add_to_collection.addEventListener("click", function() {
                     let list = "";
                     for (let name in collection) {
-                        list += getDropDownItem(name);
+                        list += P.getDropDownItem(name);
                     }
 
-                    dropdown_modal_content.innerHTML = getDropdown(list);
+                    dropdown_modal_content.innerHTML = P.getDropdown(list);
 
                     let k = this.id.substring(17);
 
@@ -96,16 +107,16 @@ function searchCB() {
 
 
 
-function formCB(event) {
+export function formCB(event) {
     searchCB();
     event.preventDefault();
 }
 
-function mainCB() {
+export function mainCB() {
     searchCB();
 }
 
-function addToCollectionBtnCB() {
+export function addToCollectionBtnCB() {
     let c_box = dropdown_modal_content.getElementsByTagName("input");
     for (let i in c_box) {
         if (isNaN(i) == false) {
@@ -122,7 +133,7 @@ function addToCollectionBtnCB() {
     }
 }
 
-function saveCB() {
+export function saveCB() {
     let name = document.getElementById("first_name").value;
     if (name in collection) {
         Materialize.toast(`You Already Have One!`, 3000);
@@ -134,15 +145,15 @@ function saveCB() {
     Materialize.toast(`Created ${name}`, 3000);
 }
 
-function myCollectionCB() {
+export function myCollectionCB() {
 	let slide_out = document.getElementById("slide-out");
 	let movie_modal_content = document.getElementById("movie_modal_content");
     console.log("hello world");
 
-    let str = getSlideOutHeader();
+    let str = Q.getSlideOutHeader();
 
     for (let name in collection) {
-        str += getSlideOutItem(name);
+        str += Q.getSlideOutItem(name);
 
     }
     slide_out.innerHTML = str;
@@ -156,13 +167,13 @@ function myCollectionCB() {
             for (let index in collection[k]) {
                 let movie = collection[k][index];
                 console.log(`${k} --- ${movie}`);
-                temp += movieModalItem(movie_to_poster, movie);
+                temp += Q.movieModalItem(movie_to_poster, movie);
 
             }
 
 
 
-            movie_modal_content.innerHTML = getMovieModalContent(k, temp);
+            movie_modal_content.innerHTML = Q.getMovieModalContent(k, temp);
         });
 
         let del = document.getElementById(`del${name}`);
@@ -188,7 +199,7 @@ function myCollectionCB() {
 }
 let rename_buffer ="";
 
-function renameCB() {
+export function renameCB() {
 	console.log("I am in Rename");
     let new_name = document.getElementById("new_name").value;
     collection[new_name] = collection[rename_buffer];
@@ -198,7 +209,7 @@ function renameCB() {
     $('.gg').sideNav('hide');
 }
 
-function deleteCB() {
+export function deleteCB() {
     console.log("I am in Delete ");
     let c_name = document.getElementById("modal_header").innerHTML;
     let movie_modal = document.getElementById("movie_modal");

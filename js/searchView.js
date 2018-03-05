@@ -1,5 +1,6 @@
-function getCard(key, content) {
-    let str = `
+export default class A {
+     getCard(key, content) {
+        let str = `
 
     <div class="col s12 m6 l4">
                 <div class="card">
@@ -21,31 +22,31 @@ function getCard(key, content) {
                 </div>
     </div>
     `;
-    return str;
+        return str;
 
-}
+    }
 
-function getMoreView(k, json_array) {
-    let str = `
+     getMoreView(k, json_array) {
+        let str = `
                         <h4>${json_array[k]["original_title"]}</h4>
                         <p>${json_array[k]["overview"]}</p>
                         <p>RATING: ${json_array[k]["vote_average"]}</p>
                     `;
-    return str;
-}
+        return str;
+    }
 
-function getDropDownItem(name){
-    let str =  `
+     getDropDownItem(name) {
+        let str = `
                             <p>
                               <input type="checkbox" id="test${name}" />
                               <label for="test${name}">${name}</label>
                             </p>
                         `;
-    return str;
-}
+        return str;
+    }
 
-function getDropdown(list){
-    let str = `
+     getDropdown(list) {
+        let str = `
                         <h4>Select Collection for the Movie</h4>
                         <form action="#">
                             
@@ -53,5 +54,6 @@ function getDropdown(list){
                         </form>
 
                     `;
-    return str;
+        return str;
+    }
 }

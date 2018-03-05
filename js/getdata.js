@@ -1,5 +1,5 @@
 
-function getData(url){
+export default function getData(url){
 	return new Promise((resolve,reject) => {
 		var ourRequest = new XMLHttpRequest();
 		ourRequest.open('GET', url,true);

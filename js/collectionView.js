@@ -1,5 +1,6 @@
-function getSlideOutHeader(){
-	let str = `
+export default class B {
+    getSlideOutHeader() {
+        let str = `
     <li><div class="user-view">
       <div class = "center">
         <img class = "circ" src="img/download.jpeg">
@@ -9,17 +10,17 @@ function getSlideOutHeader(){
       <a href="#"><span class=" center email black-text">jdandturk@gmail.com</span></a>
     </div></li>
     `;
-    return str;
-}
+        return str;
+    }
 
-function getSlideOutItem(name){
-	let str = `<li class = "row"><a href="#movie_modal" class = "modal-trigger" id = 
+    getSlideOutItem(name) {
+        let str = `<li class = "row"><a href="#movie_modal" class = "modal-trigger" id = 
         "${name}"> ${name} <i class="material-icons" id = "re${name}">assignment_return</i><i id = "del${name}" class="material-icons">delete</i></a></li>`;
-    return str;
-}
+        return str;
+    }
 
-function movieModalItem(movie_to_poster, movie){
-	let str = `<div class = " center col s12 m4 l3">
+    movieModalItem(movie_to_poster, movie) {
+        let str = `<div class = " center col s12 m4 l3">
                     
                       <input type="checkbox" id="${movie}" />
                       <label for="${movie}"><img class = "materialbox" src = "https://image.tmdb.org/t/p/w500${movie_to_poster[movie]}" style = "height:150px;"></label>
@@ -27,16 +28,17 @@ function movieModalItem(movie_to_poster, movie){
                     
                     </div>
                 `;
-    return str;
-}
+        return str;
+    }
 
-function getMovieModalContent(k,temp){
-	let str = `
+    getMovieModalContent(k, temp) {
+        let str = `
                 <h4 id = "modal_header" class = "center">${k}</h4>
                 <form action="#" class = "row">
                     ${temp}
                 </form>
                     
             `;
-    return str;
+        return str;
+    }
 }
