@@ -1,0 +1,23 @@
+{
+  "name": "movie_cruizer_material",
+  "version": "1.0.0",
+  "description": "Using Material UI Specs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kothari-Anshul/movie_cruizer_material.git"
+  },
+  "keywords": [],
+  "author": "Anshul Kothari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kothari-Anshul/movie_cruizer_material/issues"
+  },
+  "homepage": "https://github.com/Kothari-Anshul/movie_cruizer_material#readme",
+  "dependencies": {
+    "webpack": "^4.1.0"
+  }
+}
