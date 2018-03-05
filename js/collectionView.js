@@ -14,8 +14,7 @@ function getSlideOutHeader(){
 
 function getSlideOutItem(name){
 	let str = `<li class = "row"><a href="#movie_modal" class = "modal-trigger" id = 
-        "${name}"> ${name} <i class="material-icons" id = "del${name}">assignment_return</i><i i
-        d = "re${name}"class="material-icons">delete</i></a></li>`;
+        "${name}"> ${name} <i class="material-icons" id = "re${name}">assignment_return</i><i id = "del${name}" class="material-icons">delete</i></a></li>`;
     return str;
 }
 

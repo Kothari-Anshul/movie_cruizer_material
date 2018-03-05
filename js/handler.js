@@ -189,7 +189,7 @@ function myCollectionCB() {
 let rename_buffer ="";
 
 function renameCB() {
-	
+	console.log("I am in Rename");
     let new_name = document.getElementById("new_name").value;
     collection[new_name] = collection[rename_buffer];
     delete collection[rename_buffer];
@@ -199,6 +199,7 @@ function renameCB() {
 }
 
 function deleteCB() {
+    console.log("I am in Delete ");
     let c_name = document.getElementById("modal_header").innerHTML;
     let movie_modal = document.getElementById("movie_modal");
     let array = collection[c_name];
