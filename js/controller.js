@@ -1,4 +1,8 @@
 import { mainCB, searchCB, formCB, addToCollectionBtnCB, saveCB, myCollectionCB, renameCB, deleteCB } from "./handler.js";
+import '../css/materialize.css';
+import '../css/style.css';
+import '../img/download.jpeg';
+import '../img/movie.png';
 
 window.onload = function() {
 	//console.log("I am in load ");
