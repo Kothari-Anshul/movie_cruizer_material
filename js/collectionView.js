@@ -6,8 +6,8 @@ export default class B {
         <img class = "circ" src="img/download.jpeg">
       </div>
       
-      <a href="#" ><span class=" center name black-text">John Doe</span></a>
-      <a href="#"><span class=" center email black-text">jdandturk@gmail.com</span></a>
+      <a href="#" ><span class=" center name black-text">Anshul Kothari</span></a>
+      <a href="#"><span class=" center email black-text">anshulkothari96@gmail.com</span></a>
     </div></li>
     `;
         return str;
@@ -15,7 +15,10 @@ export default class B {
 
     getSlideOutItem(name) {
         let str = `<li class = "row"><a href="#movie_modal" class = "modal-trigger" id = 
-        "${name}"> ${name} <i class="material-icons" id = "re${name}">assignment_return</i><i id = "del${name}" class="material-icons">delete</i></a></li>`;
+        "${name}"> 
+         ${name}
+         <i class=" badge material-icons" id = "re${name}">assignment_return</i>
+         <i id = "del${name}" class="badge material-icons">delete</i></a></li>`;
         return str;
     }
 
@@ -33,7 +36,7 @@ export default class B {
 
     getMovieModalContent(k, temp) {
         let str = `
-                <h4 id = "modal_header" class = "center">${k}</h4>
+                <h5 id = "modal_header" class = "center">${k}</h5>
                 <form action="#" class = "row">
                     ${temp}
                 </form>
@@ -41,4 +44,18 @@ export default class B {
             `;
         return str;
     }
+    getMobileView(){
+          let str = `
+  <li><div class="user-view">
+      
+      
+      <a href="#" ><span class=" center name black-text">Anshul Kothari</span></a>
+      <a href="#"><span class=" center email black-text">anshulkothari96@gmail.com</span></a>
+    </div></li>
+    <li><a href="#create_modal" class=" waves-effect waves-light btn  blue-grey lighten-5  light-blue-text text-darken-3 modal-trigger">CREATE COLLECTION</a></li>
+
+      `;
+      return str;
+    }
+   
 }

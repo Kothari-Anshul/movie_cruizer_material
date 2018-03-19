@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf ./dist && mkdir dist",
-    "build": "npx webpack --mode development"
+    "build": "npx webpack --mode development",
+    "start":"webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
   "devDependencies": {
     "css-loader": "^0.28.10",
     "html-webpack-plugin": "^3.0.4",
-    "style-loader": "^0.20.2"
+    "style-loader": "^0.20.2",
+    "webpack-dev-server": "^3.1.0"
   }
 }

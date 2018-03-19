@@ -47,7 +47,7 @@ export default class A {
 
 	getDropdown(list) {
 		let str = `
-                        <h4>Select Collection for the Movie</h4>
+                        <h5>Select Collection for the Movie</h5>
                         <form action="#">
                             
                             ${list}

@@ -11,6 +11,7 @@ $(document).ready(function(){
       $('#movie_modal').modal();
       $('#rename_modal').modal();
       $(".button-collapse").sideNav();
+      $("#sidenav-overlay").off('click');
   });
 
 

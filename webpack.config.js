@@ -43,6 +43,9 @@ module.exports = {
             }
         ]
     },
+    devServer: {
+        contentBase: './dist'
+    },
     plugins: [
         new HTML_WEBPACKPLUGIN({
             template: './index.html'
