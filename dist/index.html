@@ -15,20 +15,18 @@
         <nav>
             <div class="nav-wrapper light-blue darken-3">
                 <a href="#!" class="brand-logo">MOVIE CRUIZER</a>
-                <a href="#!" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a href="#!" id="mobile_btn" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#create_modal" class=" waves-effect waves-light btn  blue-grey lighten-5  light-blue-text text-darken-3 modal-trigger">CREATE COLLECTION</a></li>
                     <li><a href="#" class="gg waves-effect waves-light btn  blue-grey lighten-5  light-blue-text text-darken-3" data-activates="slide-out" id="my_collection">MY COLLECTIONS</a></li>
                 </ul>
-                <ul class="side-nav" id="mobile-demo">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
-                    <li><a href="collapsible.html">Javascript</a></li>
-                    <li><a href="mobile.html">Mobile</a></li>
-                </ul>
             </div>
         </nav>
     </div>
+    <ul class="side-nav" id="mobile-demo">
+        
+        
+    </ul>
     <ul id="slide-out" class="side-nav">
     </ul>
     <div id="movie_modal" class="modal modal-fixed-footer" style="width:90%;">
@@ -49,7 +47,7 @@
             <h5>Give Name to Your Collection</h5>
             <div class="row">
                 <div class="row">
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                         <input placeholder="Collection Name" id="first_name" type="text">
                     </div>
                 </div>
@@ -114,14 +112,4 @@
             </div>
         </div>
     </div>
-    <!--
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src = "js/controller.js"></script>
-    <script src="js/searchView.js"></script>
-    <script src = "js/collectionView.js"></script>
-    <script src="js/getdata.js"></script>
-    <script src="js/handler.js"></script>
--->
 <script type="text/javascript" src="bundle.js"></script></body>

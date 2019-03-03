@@ -3,7 +3,7 @@ export default class B {
         let str = `
     <li><div class="user-view">
       <div class = "center">
-        <img class = "circ" src="img/download.jpeg">
+        <img class = "circ" style="width:100px; height:100px" src="img/download.png">
       </div>
       
       <a href="#" ><span class=" center name black-text">Anshul Kothari</span></a>

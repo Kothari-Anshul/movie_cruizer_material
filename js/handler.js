@@ -111,14 +111,6 @@ export function searchCB() {
 
 }
 
-
-
-
-
-
-
-
-
 export function formCB(event) {
     searchCB();
     event.preventDefault();

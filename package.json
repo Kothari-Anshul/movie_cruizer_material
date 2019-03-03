@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf ./dist && mkdir dist",
-    "build": "npx webpack --mode development",
+    "build": "npx webpack --mode=production",
     "start":"webpack-dev-server --open"
   },
   "repository": {
