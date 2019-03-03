@@ -7,3 +7,4 @@ Website contains following features:
 * Get detail information of movies (such as Rating)
 * Responsive web design (you can enjoy on mobile devices as well!)
 * Used material desing principles
+[Live Demo](https://nostalgic-torvalds-ab2bc6.netlify.com)
